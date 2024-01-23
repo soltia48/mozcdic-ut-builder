@@ -17,7 +17,7 @@ RUN apt-get update \
 # Install dependencies
 RUN apt-get -y install git
 
-# Clear cache
+# Cleanup
 RUN apt-get -y autoremove \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
