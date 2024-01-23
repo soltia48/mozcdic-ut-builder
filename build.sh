@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+
 docker build -t merge-ut-dictionaries ./
 docker create -it --rm --name dict-build merge-ut-dictionaries
 docker start dict-build
