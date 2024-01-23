@@ -40,6 +40,8 @@ cd ./mozcdic-ut-builder/
 ./build.sh
 ```
 
+The output will be placed in `./dist/`.
+
 ## Authors
 
 - soltia48
