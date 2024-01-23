@@ -18,7 +18,9 @@ RUN apt-get update \
 RUN apt-get -y install git
 
 # Clear cache
-RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get -y autoremove \
+    && apt-get -y clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Create working user
 RUN useradd -ms /bin/bash debian
