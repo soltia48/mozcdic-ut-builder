@@ -1,4 +1,4 @@
-FROM ruby:3.3.0
+FROM python:3-bookworm
 
 # Environment variables
 ENV INCLUDE_ALT_CANNADIC=false
