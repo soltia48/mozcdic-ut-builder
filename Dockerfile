@@ -10,15 +10,10 @@ ENV INCLUDE_PLACE_NAMES=true
 ENV INCLUDE_SKK_JISYO=false
 ENV INCLUDE_SUDACHIDICT=false
 
-# Upgrade packages
+# Install packages
 RUN apt-get update \
-    && apt-get -y upgrade
-
-# Install dependencies
-RUN apt-get -y install git
-
-# Cleanup
-RUN apt-get -y autoremove \
+    && apt-get -y install git \
+    && apt-get -y autoremove \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
 
