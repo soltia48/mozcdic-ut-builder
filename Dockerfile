@@ -1,28 +1,25 @@
-FROM python:3-bookworm
+# syntax=docker/dockerfile:1
+
+FROM python:3-bookworm AS builder
 
 # Environment variables
-ENV INCLUDE_ALT_CANNADIC=false
-ENV INCLUDE_EDICT2=false
-ENV INCLUDE_JAWIKI=true
-ENV INCLUDE_NEOLOGD=true
-ENV INCLUDE_PERSONAL_NAMES=true
-ENV INCLUDE_PLACE_NAMES=true
-ENV INCLUDE_SKK_JISYO=false
-ENV INCLUDE_SUDACHIDICT=false
+ARG INCLUDE_ALT_CANNADIC=false
+ARG INCLUDE_EDICT2=false
+ARG INCLUDE_JAWIKI=true
+ARG INCLUDE_NEOLOGD=true
+ARG INCLUDE_PERSONAL_NAMES=true
+ARG INCLUDE_PLACE_NAMES=true
+ARG INCLUDE_SKK_JISYO=false
+ARG INCLUDE_SUDACHIDICT=false
 
-# Install packages
-RUN apt-get update \
-    && apt-get -y install git \
-    && apt-get -y autoremove \
-    && apt-get -y clean \
-    && rm -rf /var/lib/apt/lists/*
+WORKDIR /workspace/build/
 
-# Create working user
-RUN useradd -ms /bin/bash debian
-USER debian
-WORKDIR /home/debian/
+# Build
+RUN --mount=type=bind,source=.,rw \
+    bash ./scripts/patch-make-sh.sh \
+    && bash ./scripts/build-dict.sh \
+    && cp ./merge-ut-dictionaries/src/mozcdic-ut.txt ../
 
-# Copy code
-COPY ./scripts/ ./scripts/
+FROM scratch AS export
 
-ENTRYPOINT [ "/bin/bash" ]
+COPY --from=builder /workspace/mozcdic-ut.txt /

@@ -1,0 +1,3 @@
+[submodule "merge-ut-dictionaries"]
+	path = merge-ut-dictionaries
+	url = https://github.com/utuhiro78/merge-ut-dictionaries.git
