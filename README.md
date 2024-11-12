@@ -24,11 +24,11 @@ Set environment variables to configure the settings.
 | INCLUDE_ALT_CANNADIC | Include [Alt-Cannadic](https://github.com/utuhiro78/mozcdic-ut-alt-cannadic) | false |
 | INCLUDE_EDICT2 | Include [EDICT2](https://github.com/utuhiro78/mozcdic-ut-edict2) | false |
 | INCLUDE_JAWIKI | Include [a dictionary generated from the Japanese Wikipedia](https://github.com/utuhiro78/mozcdic-ut-jawiki) | true |
-| INCLUDE_NEOLOGD | Include [mecab-ipadic-NEologd](https://github.com/utuhiro78/mozcdic-ut-neologd) | true |
+| INCLUDE_NEOLOGD | Include [mecab-ipadic-NEologd](https://github.com/utuhiro78/mozcdic-ut-neologd) | false |
 | INCLUDE_PERSONAL_NAMES | Include [Personal Name Dictionary](https://github.com/utuhiro78/mozcdic-ut-personal-names) | true |
 | INCLUDE_PLACE_NAMES | Include [a dictionary generated from Japan Post's ZIP code data](https://github.com/utuhiro78/mozcdic-ut-place-names) | true |
 | INCLUDE_SKK_JISYO | Include [SKK-JISYO](https://github.com/utuhiro78/mozcdic-ut-skk-jisyo) | false |
-| INCLUDE_SUDACHIDICT | Include [SudachiDict](https://github.com/utuhiro78/mozcdic-ut-sudachidict) | false |
+| INCLUDE_SUDACHIDICT | Include [SudachiDict](https://github.com/utuhiro78/mozcdic-ut-sudachidict) | true |
 
 ## Usage
 

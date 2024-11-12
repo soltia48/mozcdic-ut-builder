@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ./merge-ut-dictionaries/src/ \
+cd ./merge-ut-dictionaries/src/merge/ \
     && sed -i 's/^alt_cannadic=/# &/g' ./make.sh \
     && sed -i 's/^edict=/# &/g' ./make.sh \
     && sed -i 's/^jawiki=/# &/g' ./make.sh \

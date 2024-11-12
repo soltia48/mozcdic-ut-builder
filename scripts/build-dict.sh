@@ -10,4 +10,4 @@ export place_names=$INCLUDE_PLACE_NAMES
 export skk_jisyo=$INCLUDE_SKK_JISYO
 export sudachidict=$INCLUDE_SUDACHIDICT
 
-cd ./merge-ut-dictionaries/src/ && bash ./make.sh
+cd ./merge-ut-dictionaries/src/merge/ && bash ./make.sh
