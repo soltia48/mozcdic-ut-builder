@@ -44,7 +44,7 @@ The output will be placed in `./dist/`.
 
 ## Authors
 
-- soltia48
+- KIRISHIKI Yudai
 
 ## Thanks
 
@@ -54,4 +54,4 @@ The output will be placed in `./dist/`.
 
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2024 soltia48
+Copyright (c) 2024-2025 KIRISHIKI Yudai
